@@ -2,7 +2,7 @@
 	"use strict";
 
 	$(document).ready(function() {
-		
+
 		// ====================================================================
 
 		// Navbar position
@@ -16,7 +16,7 @@
 				$('body').css('padding-top', '0');
 			}
 		});
-		
+
 		// ====================================================================
 
 		// Smooth Scroll on Menu Click
@@ -47,10 +47,10 @@
 		// Countdown
 
 		var weddingDate = new Date();
-		var weddingDate = new Date(weddingDate.getFullYear() + 1, 1 - 1, 1);
+		var weddingDate = new Date(weddingDate.getFullYear(), 9, 28);
 		$(".countdown").countdown({
 			until: weddingDate,
-			format: 'ODHMS'
+			format: 'D'
 		});
 
 		// ====================================================================

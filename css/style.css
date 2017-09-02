@@ -134,12 +134,26 @@ section {
 =========================================================================================*/
 
 .countdown {
-	bottom: 30px;
+	bottom: 100px;
 	left: 50%;
 	margin-left: -225px;
 	position: absolute;
 	width: 450px;
 	z-index: 100;
+	display: flex!important;
+	justify-content: center!important;
+}
+
+.countdown span.countdown-row.countdown-show1{
+	display: flex!important;
+	width: auto!important;
+}
+
+.countdown span.countdown-row.countdown-show1 .countdown-section{
+	border-radius: 50%;
+	padding: 0;
+	width: 114px!important;
+	height: 114px!important;
 }
 
 /* NAVBAR
