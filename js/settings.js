@@ -3,6 +3,8 @@
 
 	$(document).ready(function() {
 
+		preload_images();
+
 		$('.close-video').on("click",function(){
 			var url = $('#video-engagement').attr('src');
 			$('#video-engagement').attr('src', '');
@@ -140,3 +142,42 @@
 	})
 
 })(jQuery);
+
+function preload_images(){
+	preload(
+		'images/parallax.jpg',
+		'images/gallery/1.jpg',
+		'images/gallery/2.jpg',
+		'images/gallery/3.jpg',
+		'images/gallery/4.jpg',
+		'images/gallery/5.jpg',
+		'images/gallery/6.jpg',
+		'images/gallery/7.jpg',
+		'images/gallery/8.jpg',
+		'images/gallery/9.jpg',
+		'images/gallery/10.jpg',
+		'images/gallery/11.jpg',
+		'images/gallery/12.jpg',
+		'images/gallery/thumbnails/1.jpg',
+		'images/gallery/thumbnails/2.jpg',
+		'images/gallery/thumbnails/3.jpg',
+		'images/gallery/thumbnails/4.jpg',
+		'images/gallery/thumbnails/5.jpg',
+		'images/gallery/thumbnails/6.jpg',
+		'images/gallery/thumbnails/7.jpg',
+		'images/gallery/thumbnails/8.jpg',
+		'images/gallery/thumbnails/9.jpg',
+		'images/gallery/thumbnails/10.jpg',
+		'images/gallery/thumbnails/11.jpg',
+		'images/gallery/thumbnails/12.jpg',
+	);
+}
+
+function preload() {
+	var images = new Array();
+
+	for (i = 0; i < preload.arguments.length; i++) {
+		images[i] = new Image();
+		images[i].src = preload.arguments[i];
+	}
+}
