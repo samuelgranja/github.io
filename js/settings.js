@@ -3,6 +3,12 @@
 
 	$(document).ready(function() {
 
+		$('.close-video').on("click",function(){
+			var url = $('#video-engagement').attr('src');
+			$('#video-engagement').attr('src', '');
+			$('#video-engagement').attr('src', 'https://www.youtube.com/embed/owCkDjmaHxM?rel=0&amp;showinfo=0');
+		});
+
 		// ====================================================================
 
 		// Navbar position
@@ -13,7 +19,13 @@
 				$('body').css('padding-top', '97px');
 			} else {
 				$('.navbar').removeClass('fixed');
-				$('body').css('padding-top', '0');
+
+				if($('body').hasClass('inner')){
+					$('body').css('padding-top', '97px');
+				}
+				else{
+					$('body').css('padding-top', '0');
+				}
 			}
 		});
 
