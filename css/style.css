@@ -202,8 +202,9 @@ section {
 	background: -ms-linear-gradient(-45deg,  rgba(214,81,110,0.2) 0%,rgba(214,81,110,0.2) 1%,rgba(82,178,189,0.2) 100%); /* IE10+ */
 	background: linear-gradient(135deg,  rgba(214,81,110,0.2) 0%,rgba(214,81,110,0.2) 1%,rgba(82,178,189,0.2) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33d6516e', endColorstr='#3352b2bd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	display: block;
+	display: flex;
 	height: 100%;
+  justify-content: center;
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -211,29 +212,46 @@ section {
 	z-index: 100;
 }
 
-.welcome {
+.welcome,
+.verse {
 	color: #fff;
 	display: block;
 	margin: 0 auto;
 	position: absolute;
-	top:33%;
-	width: 100%;
+}
+
+.welcome{
+  top:33%;
+  width: 100%;
 	-webkit-transform: translateY(-33%);
 	-moz-transform: translateY(-33%);
 	-ms-transform: translateY(-33%);
 	-o-transform: translateY(-33%);
 	transform: translateY(-33%);
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
 }
 
-.welcome p {
+.verse{
+  bottom: 3%;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.65);
+  width: 50%;
+}
+
+.welcome p{
 	font-size: 18px;
 	letter-spacing: 0.4em;
 	margin: 0;
 	text-transform: uppercase;
 }
 
-.welcome span {
+.verse p{
+  font-size: 1.5rem;
+  text-transform: initial;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5px;
+}
+
+.welcome span{
 	border: 0;
 	border-top: 1px solid #fff;
 	display: inline-block;
@@ -241,7 +259,7 @@ section {
 	width: 150px;
 }
 
-.welcome i {
+.welcome i{
 	font-size: 18px;
 }
 
@@ -635,7 +653,8 @@ section {
 	padding: 50px;
 	position: absolute;
 	right: 50%;
-	top: 50px;
+  top: 50%;
+  margin-top: -139px;
 	width: 400px;
 	z-index: 100;
 }
@@ -789,6 +808,15 @@ footer {
 		width: 100%;
 	}
 
+  .verse{
+    width: 95%;
+  }
+
+  .verse p{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+  }
+
 	.heading {
 		padding-bottom: 30px;
 	}
@@ -859,5 +887,4 @@ footer {
   #people div.container .row .text-parents.hidden-xs{
     display: none!important;
   }
-
 }

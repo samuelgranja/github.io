@@ -66,6 +66,10 @@
 					<p><span></span><i class="fa fa-heart"></i><span></span></p>
 					<p>Sábado, 28 de Octubre de 2017</p>
 				</div>
+				<div class="verse text-center" data-scroll-reveal="after 3s">
+					<p><i>"Es mejor ser dos que uno, porque ambos pueden ayudarse mutuamente a lograr el éxito. Si uno cae, el otro puede darle la mano y ayudarle."</i></p>
+					<p><strong>Eclesiastés 4:9‭-‬10a</strong></p>
+				</div>
 			</div>
 			<div class="countdown" data-scroll-reveal="enter from the top after 2.5s"></div>
 		</div>
@@ -416,13 +420,12 @@
 
 					// Create a new StyledMapType object, passing it the array of styles,
 					// as well as the name to be displayed on the map type control.
-					var styledMap = new google.maps.StyledMapType(styles,
-					{name: "Styled Map"});
+					var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
 					var mapOptions = {
 						scrollwheel: false,
-						zoom: 12,
-						center: new google.maps.LatLng(7.771357200000001,-72.22614659999999),
+						zoom: 13,
+						center: new google.maps.LatLng(7.784929500000001,-72.22271030000002),
 						mapTypeControlOptions: {
 							mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
 						}
