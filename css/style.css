@@ -817,7 +817,7 @@ footer {
 		width: 100%;
 	}
 
-  .verse{
+  .verse .verse-inner{
     width: 95%;
   }
 
