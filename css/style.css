@@ -103,6 +103,14 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@keyframes beat{
+	to { transform: scale(1.15); }
+}
+
+@keyframes moveRight{
+	to { padding-left: 20px; }
+}
+
 /* GLOBAL STYLES
 =========================================================================================*/
 
@@ -145,12 +153,22 @@ button {
 	-o-transition: all .5s ease;
 }
 
+a.hand{
+  cursor: pointer;
+}
+
 a:hover {
 	text-decoration: none;
 }
 
-p {
+p,
+ul {
 	margin: 0 0 1em;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
 }
 
 hr {
@@ -331,6 +349,7 @@ section {
 
 .navbar {
 	border-radius: 0;
+  border: none;
 }
 
 .navbar.fixed {
@@ -364,6 +383,16 @@ section {
 
 .navbar-collapse{
 	text-transform: uppercase;
+  max-height: initial!important;
+}
+
+.navbar.navbar-default div.container .nav.navbar-nav > li.confirm{
+  overflow: hidden;
+}
+
+.navbar.navbar-default div.container .nav.navbar-nav > li.confirm > a{
+  animation: beat 1.25s infinite alternate;
+	transform-origin: center;
 }
 
 /* HEADINGS
@@ -482,7 +511,8 @@ section {
 	margin-bottom: 60px;
 }
 
-#people div.container .row .text-parents{
+#people div.container .row .text-parents,
+#accommodation div.container .row .text-acc{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -659,7 +689,7 @@ section {
 	border-radius: 8px;
 	color: #222;
 	margin-right: -470px;
-	padding: 50px;
+	padding: 50px!important;
 	position: absolute;
 	right: 50%;
   top: 50%;
@@ -684,6 +714,8 @@ section {
 	background: #222;
 	color: #fff;
 	margin-top: 20px;
+  animation: beat 1.25s infinite alternate;
+  transform-origin: center;
 }
 
 /* REGISTRY
@@ -775,6 +807,11 @@ footer {
 ----------------------------------------------------------------------------------------*/
 @media (max-width: 767px) {
 
+  .navbar.navbar-default div.container .nav.navbar-nav > li.confirm > a{
+    animation: moveRight 1.25s infinite alternate;
+  	transform-origin: center;
+  }
+
 	.btn {
 		white-space: normal;
 	}
@@ -848,11 +885,16 @@ footer {
 		margin: 0;
 	}
 
-	#people h5, #accommodation h5 {
+	#people h5{
 		margin: 20px 0 8px;
 	}
 
-  #people div.container .row .text-parents{
+  #accommodation h5 {
+		margin: 20px 0 20px;
+	}
+
+  #people div.container .row .text-parents,
+  #accommodation div.container .row .text-acc{
     display: block;
     flex-direction: none;
     justify-content: none;
